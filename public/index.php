@@ -20,14 +20,6 @@
 	Skype: romain.marbaix
 
 -->
-<?php
-	if(isset($_POST['contact-name']) &&
-       isset($_POST['contact-email']) &&
-       isset($_POST['contact-subject']) &&
-       isset($_POST['contact-message'])) {
-		echo "ok";
-	}
-?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
