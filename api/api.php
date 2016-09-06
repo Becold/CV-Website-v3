@@ -1,16 +1,12 @@
 <?php
-
-require_once('api/class/Config.php');
+require_once(CLASS_FOLDER_PATH . 'Config.php');
 spl_autoload_register(function ($class) {
-
-    // Si on appelle une class
-    $file = 'api/class/' . $class . '.class.php';
+    $file = CLASS_FOLDER_PATH . $class . '.class.php';
     if (file_exists($file)) require($file);
 
-    // Si on appelle un controller
     if(Utils::contains($class, 'Controller')) {
         $class = str_replace('Controller', '', $class);
-        $file = 'api/class/' . $class . '.controller.php';
+        $file = CLASS_FOLDER_PATH . $class . '.controller.php';
         if (file_exists($file)) require($file);
     }
 });
